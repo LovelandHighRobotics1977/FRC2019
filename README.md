@@ -1,3 +1,5 @@
 # FRC2019
 
-The Java code for the 2019 First Robotics competition
+The in development Java code for the 2019 First Robotics competition
+
+Nothing is guarenteed to work.
