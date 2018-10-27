@@ -2,4 +2,4 @@
 
 The in development Java code for the 2019 First Robotics competition
 
-Nothing is guarenteed to work.
+Nothing is guaranteed to work.
