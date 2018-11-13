@@ -20,6 +20,7 @@ public class DriveTime extends CommandBase {
         //requires(drive);
         
         vPowerMin = minSpeedPercent;
+        System.out.println("Beginning power level: " + timeMillis);
         vPowerMax = maxSpeedPercent;
         startTime = System.currentTimeMillis();
         halfTime = startTime + (timeMillis / 2);
@@ -34,6 +35,7 @@ public class DriveTime extends CommandBase {
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
+    	System.out.println("Calling Drive: " + driveSpeed);
         drive.drive(0, driveSpeed, 0);
     }
 	
