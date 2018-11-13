@@ -27,7 +27,7 @@ public class DriveTime extends CommandBase {
         endTime = startTime + timeMillis;
         System.out.println("drive time is go");
     }
-    
+    //EPIC
  // Called just before this Command runs the first time
     protected void initialize() {
         driveSpeed = vPowerMin;
