@@ -20,7 +20,9 @@ public class DriveTime extends CommandBase {
         //requires(drive);
         
         vPowerMin = minSpeedPercent;
-        System.out.println("Beginning power level: " + timeMillis);
+        System.out.println("Min: " + minSpeedPercent);
+        System.out.println("Max: " + maxSpeedPercent);
+        System.out.println("Time: " + timeMillis);
         vPowerMax = maxSpeedPercent;
         startTime = System.currentTimeMillis();
         halfTime = startTime + (timeMillis / 2);
