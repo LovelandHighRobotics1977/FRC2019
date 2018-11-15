@@ -2,7 +2,6 @@ package org.usfirst.frc.team1977.robot.commands;
 
 import org.usfirst.frc.team1977.robot.OI;
 import org.usfirst.frc.team1977.robot.subsystems.Drive;
-import org.usfirst.frc.team1977.robot.subsystems.Rollers;
 import org.usfirst.frc.team1977.robot.subsystems.Shooter;
 
 import edu.wpi.first.wpilibj.command.Command;
@@ -25,7 +24,7 @@ public abstract class CommandBase extends Command {
 	public static void init() {
 		drive = Drive.getInstance();
 		oi = OI.getInstance();
-		
+		shooter = Shooter.getInstance();
 		
 	}
 }

@@ -8,6 +8,7 @@
 package org.usfirst.frc.team1977.robot;
 
 import org.usfirst.frc.team1977.robot.input.XBoxController;
+import org.usfirst.frc.team1977.robot.commands.shooter.*;
 
 /**
  * This class is the glue that binds the controls on the physical operator
@@ -63,6 +64,7 @@ public class OI {
 		//driveJoystick.leftWhileHeld(new TurnTime(100,1));
 		//180 turn function
 		//driveJoystick.rightWhenPressed(new TurnTime(500,1)); //THIS NEEDS TO BE Adjusted
+		driveJoystick.rightWhenPressed(new ShooterShoot());
 	}
 	
 	public static OI getInstance() {
