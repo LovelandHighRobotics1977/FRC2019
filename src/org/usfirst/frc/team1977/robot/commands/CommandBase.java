@@ -2,6 +2,7 @@ package org.usfirst.frc.team1977.robot.commands;
 
 import org.usfirst.frc.team1977.robot.OI;
 import org.usfirst.frc.team1977.robot.subsystems.Drive;
+import org.usfirst.frc.team1977.robot.subsystems.Shooter;
 
 import edu.wpi.first.wpilibj.command.Command;
 
@@ -11,6 +12,8 @@ public abstract class CommandBase extends Command {
 	 */
 	protected static OI oi;
 	protected static Drive drive;
+	protected static Shooter shooter;
+
 	
 	/**
 	 * Initialize the CommandBase, in doing so accessing and initializing every

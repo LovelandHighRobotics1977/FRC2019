@@ -6,9 +6,9 @@ import org.usfirst.frc.team1977.robot.commands.CommandBase;
 public class TurnTime extends CommandBase{
 	long startTime;
 	long endTime;
-	long turnDirection;
+	double turnDirection;
 	
-    public TurnTime( long time , long direction) {
+    public TurnTime( long time , double direction) {
         // Use requires() here to declare subsystem dependencies
         // eg. requires(chassis);
     	requires( drive );
