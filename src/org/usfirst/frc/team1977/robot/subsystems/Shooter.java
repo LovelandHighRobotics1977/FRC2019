@@ -1,7 +1,5 @@
 package org.usfirst.frc.team1977.robot.subsystems;
 import edu.wpi.first.wpilibj.command.Subsystem;
-import edu.wpi.first.wpilibj.Relay;
-import edu.wpi.first.wpilibj.Victor;
 import edu.wpi.first.wpilibj.VictorSP;
 
 public class Shooter extends Subsystem {
@@ -21,13 +19,14 @@ public class Shooter extends Subsystem {
     	return instance;
 	}
 	
-	public void push() {
+	public void shoot() {
 		ShooterMotor.set(-.30);
 	}
 	
-	public void hold() {
-		ShooterMotor.set(.20);
+	public void suck() {
+		ShooterMotor.set(.30);
 	}
+	
 	public void stop() {
 		System.out.println(ShooterMotor.get());
 		ShooterMotor.stopMotor();

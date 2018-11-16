@@ -19,7 +19,7 @@ public class ShooterShoot extends CommandBase{
     }
 	
 	public void execute() {	
-		shooter.push();	
+		shooter.shoot();	
 	}
 	
 	protected boolean isFinished() {
