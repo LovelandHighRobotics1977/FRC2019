@@ -25,6 +25,10 @@ public abstract class CommandBase extends Command {
 		drive = Drive.getInstance();
 		oi = OI.getInstance();
 		shooter = Shooter.getInstance();
+		System.out.println("Test MoFo");
+		if(shooter == null) {
+			System.out.println("Shooter in NULL in init");
+		}
 		
 	}
 }

@@ -7,15 +7,24 @@ import org.usfirst.frc.team1977.robot.commands.drive.*;
 
 public class AutonomousDefault extends CommandGroup {	
 	
+	int time;
 	public AutonomousDefault() {
 		// Pause for 118 or any additional teams
-		addSequential(new DriveTime(0, 0, 3000));
-		addSequential(new DriveTime(.4, .4, 6000));
-		//addSequential(new DriveSide(.4, .4, 13000));
-		addSequential(new TurnTime(7100, 0.5));
-		addSequential(new DriveTime(.4,.4, 7700));
+		time = 0;
+		addTime(3000);
+		addSequential(new DriveTime(0, 0, time));
+		addTime(3000);
+		addSequential(new DriveTime(.4, .4, time));
+		//addSequential(new DriveSide(.4, .4, 13000));	
+		addTime(4000);
+		addSequential(new TurnTime(time, 0.5));
+		addTime(2000);
+		addSequential(new DriveTime(.4,.4, time));
 	}
-	
-	
+	// This function allows us to only set the time we want the function to run for, rather than manually needing to add up
+	// the time eaach time
+	void addTime(int timeAdd) {
+		time += timeAdd;
+	}
 	
 }

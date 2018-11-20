@@ -9,13 +9,19 @@ public class ShooterShoot extends CommandBase{
 	long commandTime = 1000;
 	
 	public ShooterShoot() {
+		if(shooter == null) {
+			for(int i = 0; i < 6; i++) {
+				System.out.println("Shooter is NULL.");
+			}
+			return;
+		}
 		requires(shooter);
 	}
 	
 	protected void initialize() {
 		startTime = System.currentTimeMillis();
     	endTime = startTime + commandTime;
-    	System.out.println("Roller is rolling");
+    	//System.out.println("Roller is rolling");
     }
 	
 	public void execute() {	
