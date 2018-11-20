@@ -9,12 +9,13 @@ public class ShooterShoot extends CommandBase{
 	long commandTime = 1000;
 	
 	public ShooterShoot() {
-		if(shooter == null) {
-			for(int i = 0; i < 6; i++) {
-				System.out.println("Shooter is NULL.");
-			}
-			return;
-		}
+		// This was to test an error with shooter being null
+//		if(shooter == null) {
+//			for(int i = 0; i < 6; i++) {
+//				System.out.println("Shooter is NULL.");
+//			}
+//			return;
+//		}
 		requires(shooter);
 	}
 	
