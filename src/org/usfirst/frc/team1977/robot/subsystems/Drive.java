@@ -44,6 +44,7 @@ public class Drive extends Subsystem {
 	
 	public Drive(){
 		//Define motor controllers for drive train on test chassis
+		//These are motors.
 		left = new TalonSRX(RobotMap.DRIVE_FRONT_LEFT_TAlON);
     	right = new TalonSRX(RobotMap.DRIVE_FRONT_RIGHT_TALON);
     	
