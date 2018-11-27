@@ -29,10 +29,8 @@ public class Drive extends Subsystem {
 	private TALON backRight;*/
 	
 	
-	private TalonSRX frontLeft;
-	private TalonSRX frontRight;
-	private TalonSRX backLeft;
-	private TalonSRX backRight;
+	private TalonSRX left;
+	private TalonSRX right;
 	
 	
 	private UserDrive userDrive;
@@ -46,10 +44,8 @@ public class Drive extends Subsystem {
 	
 	public Drive(){
 		//Define motor controllers for drive train on test chassis
-		frontLeft = new TalonSRX(RobotMap.DRIVE_FRONT_LEFT_TAlON);
-    	frontRight = new TalonSRX(RobotMap.DRIVE_FRONT_RIGHT_TALON);
-    	backLeft = new TalonSRX(RobotMap.DRIVE_BACK_LEFT_TALON);
-    	backRight = new TalonSRX(RobotMap.DRIVE_BACK_RIGHT_TALON);
+		left = new TalonSRX(RobotMap.DRIVE_FRONT_LEFT_TAlON);
+    	right = new TalonSRX(RobotMap.DRIVE_FRONT_RIGHT_TALON);
     	
     	/* Define motor controllers for drive train on main chassis
     	 * Need this because FIRST only has TALON plugins and they have no idea what its like trying to find and install plugins from third party sites that look fairly sketchy and don't really install right and why can't just add the commonly used motor controllers that they have in their FIRST Choice Program
@@ -84,11 +80,9 @@ public class Drive extends Subsystem {
      */
 	
 	ControlMode iJustWantToSleep = ControlMode.PercentOutput;
-	public void drive(double hPower, double vPower, double turn) {
-        frontLeft.set(iJustWantToSleep, (vPower - hPower + (turn * turnPowerCoefficient)) * voltageCoefficient);
-        frontRight.set(iJustWantToSleep, (-vPower - hPower + (turn * turnPowerCoefficient)) * voltageCoefficient);
-         backLeft.set(iJustWantToSleep, (vPower + hPower + (turn * turnPowerCoefficient)) * voltageCoefficient);
-        backRight.set(iJustWantToSleep, (-vPower + hPower + (turn * turnPowerCoefficient)) * voltageCoefficient);
+	public void drive(double lPower, double rPower, double turn) {
+        left.set(iJustWantToSleep, (lPower * voltageCoefficient));
+        right.set(iJustWantToSleep, (rPower * voltageCoefficient));
     }
 	
 	public void stop() {
