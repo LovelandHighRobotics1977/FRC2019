@@ -3,12 +3,12 @@ package org.usfirst.frc.team1977.robot.commands.drive;
 import org.usfirst.frc.team1977.robot.commands.CommandBase;
 
 
-public class TurnTime extends CommandBase{
+public class WideTurn extends CommandBase{
 	long startTime;
 	long endTime;
 	long turnDirection;
 	
-    public TurnTime( long time , long direction) {
+    public WideTurn( long speed , long time) {
         // Use requires() here to declare subsystem dependencies
         // eg. requires(chassis);
     	requires( drive );

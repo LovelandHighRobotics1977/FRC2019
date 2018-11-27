@@ -81,13 +81,13 @@ public class Drive extends Subsystem {
      */
 	
 	ControlMode iJustWantToSleep = ControlMode.PercentOutput;
-	public void drive(double lPower, double rPower, double turn) {
+	public void drive(double lPower, double rPower) {
         left.set(iJustWantToSleep, (lPower * voltageCoefficient));
         right.set(iJustWantToSleep, (rPower * voltageCoefficient));
     }
 	
 	public void stop() {
-    	drive(0, 0, 0);
+    	drive(0, 0);
     }
 	
 	public boolean isSpeedToggle() {
