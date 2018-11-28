@@ -65,6 +65,7 @@ public class OI {
 		//180 turn function
 		//driveJoystick.rightWhenPressed(new TurnTime(500,1)); //THIS NEEDS TO BE Adjusted
 		driveJoystick.rightWhenPressed(new ShooterShoot());
+		driveJoystick.leftWhenPressed(new ShooterSuck());
 	}
 	
 	public static OI getInstance() {
