@@ -2,8 +2,6 @@ package org.usfirst.frc.team1977.robot.commands.drive;
 
 import org.usfirst.frc.team1977.robot.commands.CommandBase;
 
-import edu.wpi.first.wpilibj.Joystick;
-
 public class UserDrive extends CommandBase {
 	//Time for 180 degree turn
 	
