@@ -33,7 +33,8 @@ public class SpotTurn extends CommandBase{
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
     	if(direction) {
-    	drive.drive( turnSpeed, -turn );
+    	//drive.drive(left, right);
+    	drive.drive( turnSpeed, -turnSpeed );
     	} else {
     	drive.drive(-turnSpeed, turnSpeed);
     	}

@@ -12,23 +12,17 @@ public class UserDrive extends CommandBase {
 	}
 	
 	protected void execute() {
-		double hPower = oi.getDriveJoystick().getLeftX();
-		double vPower = oi.getDriveJoystick().getLeftY();
-		double turn = (oi.getDriveJoystick().getLeftTriggerAxis() * 0.7)
-				- (oi.getDriveJoystick().getRightTriggerAxis() * 0.7);
+		double lPower = oi.getDriveJoystick().getLeftY();
+		double rPower = oi.getDriveJoystick().getRightY();
 		
-		if (Math.abs(hPower) < .2) {
-			hPower = 0;
+		if (Math.abs(lPower) < .2) {
+			lPower = 0;
 		}
 
-		if (Math.abs(vPower) < .2) {
-			vPower = 0;
+		if (Math.abs(rPower) < .2) {
+			rPower = 0;
 		}
-
-		if (Math.abs(turn) < .2) {
-			turn = 0;
-		}
-		drive.drive(-hPower, -vPower, -turn);
+		drive.drive(-lPower, -rPower);
 		
 	}
 	

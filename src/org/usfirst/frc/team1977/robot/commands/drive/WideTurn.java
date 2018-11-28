@@ -6,16 +6,24 @@ import org.usfirst.frc.team1977.robot.commands.CommandBase;
 public class WideTurn extends CommandBase{
 	long startTime;
 	long endTime;
-	long turnDirection;
-	
-    public WideTurn( long speed , long time) {
+	double turnSpeed;
+	boolean direction;
+	//dir is a value either 1 for right or -1 for left
+    public WideTurn( long speed , long time, int dir) {
         // Use requires() here to declare subsystem dependencies
         // eg. requires(chassis);
     	requires( drive );
     	startTime = System.currentTimeMillis();
     	endTime = startTime + time;
-    	turnDirection = direction;
+    	turnSpeed = speed;
     	
+    	if(dir == 1) {
+    		//Right
+    		direction = true;
+    	} else if (dir == -1){
+    		//Left
+    		direction = false;
+    	}
     }
 
     // Called just before this Command runs the first time
@@ -25,7 +33,11 @@ public class WideTurn extends CommandBase{
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
-    	drive.drive( 0, 0, turnDirection );
+    	if(direction) {
+    	drive.drive( 0, turnSpeed);
+    	} else {
+    	drive.drive(turnSpeed, 0);
+    	}
     	
     }
 

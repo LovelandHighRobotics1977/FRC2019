@@ -29,8 +29,10 @@ public class Drive extends Subsystem {
 	private TALON backRight;*/
 	
 	
-	private TalonSRX left;
-	private TalonSRX right;
+	private TalonSRX leftOne;
+	private TalonSRX leftTwo;
+	private TalonSRX rightOne;
+	private TalonSRX rightTwo;
 	
 	
 	private UserDrive userDrive;
@@ -45,8 +47,10 @@ public class Drive extends Subsystem {
 	public Drive(){
 		//Define motor controllers for drive train on test chassis
 		//These are motors.
-		left = new TalonSRX(RobotMap.DRIVE_FRONT_LEFT_TAlON);
-    	right = new TalonSRX(RobotMap.DRIVE_FRONT_RIGHT_TALON);
+		leftOne = new TalonSRX(RobotMap.DRIVE_LEFT_ONE_TAlON);
+    	leftTwo = new TalonSRX(RobotMap.DRIVE_LEFT_TWO_TALON);
+    	rightOne = new TalonSRX(RobotMap.DRIVE_RIGHT_ONE_TALON);
+    	rightTwo = new TalonSRX(RobotMap.DRIVE_RIGHT_TWO_TALON);
     	
     	/* Define motor controllers for drive train on main chassis
     	 * Need this because FIRST only has TALON plugins and they have no idea what its like trying to find and install plugins from third party sites that look fairly sketchy and don't really install right and why can't just add the commonly used motor controllers that they have in their FIRST Choice Program
@@ -82,8 +86,10 @@ public class Drive extends Subsystem {
 	
 	ControlMode iJustWantToSleep = ControlMode.PercentOutput;
 	public void drive(double lPower, double rPower) {
-        left.set(iJustWantToSleep, (lPower * voltageCoefficient));
-        right.set(iJustWantToSleep, (rPower * voltageCoefficient));
+        leftOne.set(iJustWantToSleep, (lPower * voltageCoefficient));
+        leftTwo.set(iJustWantToSleep, (lPower * voltageCoefficient));
+        rightOne.set(iJustWantToSleep, (rPower * voltageCoefficient));
+        rightTwo.set(iJustWantToSleep, (rPower * voltageCoefficient));
     }
 	
 	public void stop() {
