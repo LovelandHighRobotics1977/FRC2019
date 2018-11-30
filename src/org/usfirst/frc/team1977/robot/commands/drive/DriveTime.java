@@ -10,27 +10,24 @@ public class DriveTime extends CommandBase {
     private final String subsytemName = "Drive";*/
 
     private final double lPower, rPower;
-    private final long startTime, halfTime, endTime;
-    private long lastRamp;
-    private double driveSpeed;
+    private final long startTime, endTime;
 
-    public DriveTime(double leftSpeedPercent, double rightSpeedPercent, int timeMillis) {
+    public DriveTime(double leftSpeed, double rightSpeed, int timeMillis) {
         // Use requires() here to declare subsystem dependencies
         // eg. requires(chassis);
 
         //requires(drive);
         
-        lPower = leftSpeedPercent;
-        rPower = rightSpeedPercent;
+        lPower = leftSpeed;
+        rPower = rightSpeed;
         startTime = System.currentTimeMillis();
-        halfTime = startTime + (timeMillis / 2);
         endTime = startTime + timeMillis;
         System.out.println("drive time is go");
     }
     
  // Called just before this Command runs the first time
     protected void initialize() {
-        lastRamp = System.currentTimeMillis();
+        
     }
 
     // Called repeatedly when this Command is scheduled to run
