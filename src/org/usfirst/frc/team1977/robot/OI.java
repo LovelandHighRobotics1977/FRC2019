@@ -6,8 +6,7 @@
 /*----------------------------------------------------------------------------*/
 
 package org.usfirst.frc.team1977.robot;
-
-import org.usfirst.frc.team1977.robot.input.XBoxController;
+import org.usfirst.frc.team1977.robot.input.*;
 
 /**
  * This class is the glue that binds the controls on the physical operator
