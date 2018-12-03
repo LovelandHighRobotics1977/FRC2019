@@ -6,6 +6,7 @@
 /*----------------------------------------------------------------------------*/
 
 package org.usfirst.frc.team1977.robot;
+import org.usfirst.frc.team1977.robot.input.*;
 
 import org.usfirst.frc.team1977.robot.input.*;
 
