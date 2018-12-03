@@ -1,15 +1,13 @@
 /*----------------------------------------------------------------------------*/
-/* Copyright (c) 2017-2018 FIRST. All Rights Reserved.                        */
+/* Copyright (c) 2018-2019 FIRST. All Rights Reserved.                        */
 /* Open Source Software - may be modified and shared by FRC teams. The code   */
 /* must be accompanied by the FIRST BSD license file in the root directory of */
 /* the project.                                                               */
 /*----------------------------------------------------------------------------*/
-
 package org.usfirst.frc.team1977.robot;
 import org.usfirst.frc.team1977.robot.input.*;
-
-import org.usfirst.frc.team1977.robot.input.*;
-
+import org.usfirst.frc.team1977.robot.commands.shooter.*;
+import org.usfirst.frc.team1977.robot.commands.pneumatic.*;
 /**
  * This class is the glue that binds the controls on the physical operator
  * interface to the commands and command groups that allow control of the robot.
@@ -57,13 +55,10 @@ public class OI {
 	
 	public void init() {
 		//Put things here when you want buttons to trigger
-		//Speed toggle
-		//driveJoystick.leftWhenPressed(new SpeedToggle());
-		//Turn functions for shoulders
-		//driveJoystick.rightWhileHeld(new TurnTime(100,-1));
-		//driveJoystick.leftWhileHeld(new TurnTime(100,1));
-		//180 turn function
-		//driveJoystick.rightWhenPressed(new TurnTime(500,1)); //THIS NEEDS TO BE Adjusted
+		driveJoystick.rightWhenPressed(new ShooterShoot());
+		driveJoystick.leftWhenPressed(new ShooterSuck());
+		driveJoystick.aWhenPressed(new PneumaticUp());
+		driveJoystick.bWhenPressed(new PneumaticDown());
 	}
 	
 	public static OI getInstance() {

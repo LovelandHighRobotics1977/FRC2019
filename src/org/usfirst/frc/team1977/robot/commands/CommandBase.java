@@ -11,6 +11,7 @@ public abstract class CommandBase extends Command {
 	protected static OI oi;
 	protected static Drive drive;
 	protected static Shooter shooter;
+	protected static Pneumatic pneumatic;
 	/**
 	 * Initialize the CommandBase, in doing so accessing and initializing every
 	 * primary subsystem on the robot. Use this during robot initialization to
@@ -21,6 +22,6 @@ public abstract class CommandBase extends Command {
 		drive = Drive.getInstance();
 		oi = OI.getInstance();
 		shooter = Shooter.getInstance();
-		
+		pneumatic = Pneumatic.getInstance();
 	}
 }
