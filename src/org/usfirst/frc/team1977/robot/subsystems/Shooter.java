@@ -10,7 +10,7 @@ public class Shooter extends Subsystem {
 	private VictorSP ShooterMotor;
 	
 	Shooter(){
-		ShooterMotor = new VictorSP(0);
+		//ShooterMotor = new VictorSP(0);
 	}
 	public static Shooter getInstance() {
 		if (instance == null) {
@@ -20,11 +20,11 @@ public class Shooter extends Subsystem {
 	}
 	
 	public void shoot() {
-		ShooterMotor.set(-.30);
+		//ShooterMotor.set(-.30);
 	}
 	
 	public void suck() {
-		ShooterMotor.set(.30);
+		//ShooterMotor.set(.30);
 	}
 	
 	public void stop() {

@@ -13,7 +13,7 @@ public class Pneumatic extends Subsystem{
 	
 	Pneumatic(){
 		piston1 = new DoubleSolenoid(6, 7);
-		compressor1 = new Compressor(0);
+		compressor1 = new Compressor(4);
 		compressor1.setClosedLoopControl(true);
 	}
 	
