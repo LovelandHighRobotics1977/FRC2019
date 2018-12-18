@@ -1,5 +1,4 @@
 # FRC2019
 
-The final Java code for the 2019 First Robotics competition.
+The Java code for the 2019 practice competion at the beginning of the year.
 
-Everything in this branch should be tested and confirmed working.

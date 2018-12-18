@@ -1,8 +1,7 @@
 package org.usfirst.frc.team1977.robot.commands;
 
 import org.usfirst.frc.team1977.robot.OI;
-import org.usfirst.frc.team1977.robot.subsystems.Drive;
-
+import org.usfirst.frc.team1977.robot.subsystems.*;
 import edu.wpi.first.wpilibj.command.Command;
 
 public abstract class CommandBase extends Command {
@@ -11,7 +10,8 @@ public abstract class CommandBase extends Command {
 	 */
 	protected static OI oi;
 	protected static Drive drive;
-	
+	protected static Shooter shooter;
+	protected static Pneumatic pneumatic;
 	/**
 	 * Initialize the CommandBase, in doing so accessing and initializing every
 	 * primary subsystem on the robot. Use this during robot initialization to
@@ -21,7 +21,7 @@ public abstract class CommandBase extends Command {
 	public static void init() {
 		drive = Drive.getInstance();
 		oi = OI.getInstance();
-		
-		
+		shooter = Shooter.getInstance();
+		pneumatic = Pneumatic.getInstance();
 	}
 }
