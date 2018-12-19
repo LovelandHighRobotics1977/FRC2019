@@ -86,9 +86,9 @@ public class Drive extends Subsystem {
 	
 	ControlMode iJustWantToSleep = ControlMode.PercentOutput;
 	public void drive(double lPower, double rPower) {
-        leftOne.set(iJustWantToSleep, (lPower * voltageCoefficient));
+        leftOne.set(iJustWantToSleep, -(lPower * voltageCoefficient));
         leftTwo.set(iJustWantToSleep, (lPower * voltageCoefficient));
-        rightOne.set(iJustWantToSleep, (rPower * voltageCoefficient));
+        rightOne.set(iJustWantToSleep, -(rPower * voltageCoefficient));
         rightTwo.set(iJustWantToSleep, (rPower * voltageCoefficient));
     }
 	
