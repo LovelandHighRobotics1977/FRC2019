@@ -6,6 +6,7 @@ import org.usfirst.frc.team1977.robot.subsystems.Shooter;
 
 import edu.wpi.first.wpilibj.command.Command;
 
+
 public abstract class CommandBase extends Command {
 	/**
 	 * Inherited static access to the OI.
