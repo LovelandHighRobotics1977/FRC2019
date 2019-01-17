@@ -34,7 +34,7 @@ public class Shooter extends Subsystem {
 	@Override
 	protected void initDefaultCommand() {
 		// TODO Auto-generated method stub
-		
+		break;
 	}
 
 
