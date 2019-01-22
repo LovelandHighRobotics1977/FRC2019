@@ -12,9 +12,9 @@ public class MidAutonomous extends CommandGroup {
 	
 	
 	public MidAutonomous() {
-		addSequential(new DriveTime(0, -.5, 1000));
-		addSequential(new DriveSide(0, switchPosition == 'L'? 1 : -1, 2500));
-		addSequential(new DriveTime(-.5, -.5, 4500));
+		addSequential(new DriveTime(-.5, 1000));
+		addSequential(new DriveSide(switchPosition == 'L'? 1 : -1, 2500));
+		addSequential(new DriveTime(-.5, 4500));
 	}
 	
 }

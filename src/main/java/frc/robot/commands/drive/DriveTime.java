@@ -8,31 +8,26 @@ public class DriveTime extends CommandBase {
 	/*private final String commandName = "Drive Forward";
     private final String subsytemName = "Drive";*/
 
-    private final double vPowerMin, vPowerMax;
-    private final long startTime, halfTime, endTime;
+    private final double vPower;
+    private final long startTime,  endTime;
 
     private double driveSpeed;
     
     //Percentage goes from -1 to 1 - See CTRE documentation http://www.ctr-electronics.com/downloads/api/java/html/index.html
-    public DriveTime(double minSpeedPercent, double maxSpeedPercent, int timeMillis) {
+    public DriveTime(double speedPercent, int timeMillis) {
         // Use requires() here to declare subsystem dependencies
         // eg. requires(chassis);
         //requires(drive);
         
-        vPowerMin = minSpeedPercent;
-        System.out.println("Min: " + minSpeedPercent);
-        System.out.println("Max: " + maxSpeedPercent);
-        System.out.println("Time: " + timeMillis);
-        vPowerMax = maxSpeedPercent;
+        vPower = speedPercent;
         startTime = System.currentTimeMillis();
-        halfTime = startTime + (timeMillis / 2);
         endTime = startTime + timeMillis;
         System.out.println("drive time is go");
     }
     //EPIC
  // Called just before this Command runs the first time
     protected void initialize() {
-        driveSpeed = vPowerMin;
+        driveSpeed = vPower;
     }
 
     // Called repeatedly when this Command is scheduled to run
