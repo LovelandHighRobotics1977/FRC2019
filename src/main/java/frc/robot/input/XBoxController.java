@@ -1,6 +1,6 @@
 package frc.robot.input;
 
-import java.util.Vector;
+//import java.util.Vector;
 
 import frc.robot.RobotMap;
 
@@ -23,7 +23,7 @@ public class XBoxController extends Joystick{
 		private JoystickButton thumbLeft;
 		private JoystickButton thumbRight;
 		// Listeners
-		private Vector axisListeners;
+		//private Vector axisListeners;
 
 		/**
 		 * Creates a new XBox 360 controller instance at the specified port
@@ -36,7 +36,7 @@ public class XBoxController extends Joystick{
 			super(port);
 			this.port = port;
 			initInputSources();
-			axisListeners = new Vector();
+			//axisListeners = new Vector();
 		}
 
 		/**
