@@ -22,6 +22,10 @@ public class ArmServo extends Subsystem{
 		servoOne.setAngle(180);
 	}
 
+	public void reset(){
+		servoOne.setAngle(0);
+	}
+
 	public void stop(){
 		System.out.println(servoOne.get());
 		servoOne.stopMotor();
@@ -29,7 +33,7 @@ public class ArmServo extends Subsystem{
 
 	@Override
 	protected void initDefaultCommand() {
-		// TODO Auto-generated method stub
+		// Auto-generated method stub
 		return;
 	}
 
