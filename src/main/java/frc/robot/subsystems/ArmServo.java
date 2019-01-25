@@ -6,7 +6,7 @@ public class ArmServo extends Subsystem{
 
     public static ArmServo instance;
 	public Servo servoOne;
-	public static int servoID;
+	public static int servoID = 9;
 	ArmServo(){
 		servoOne = new Servo(servoID);
 	}
