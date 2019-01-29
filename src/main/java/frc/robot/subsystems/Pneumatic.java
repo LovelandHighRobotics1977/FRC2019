@@ -15,7 +15,8 @@ public class Pneumatic extends Subsystem{
 		piston1 = new DoubleSolenoid(6, 7);
 		compressor1 = new Compressor(0);
         compressor1.setClosedLoopControl(true);
-        compressor1.stop();
+		compressor1.start();
+		System.out.print("Compressing running? " + compressor1.enabled());
 	}
 	
 	

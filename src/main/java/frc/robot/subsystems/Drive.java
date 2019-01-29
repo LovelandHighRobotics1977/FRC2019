@@ -46,10 +46,10 @@ public class Drive extends Subsystem {
 	
 	public Drive(){
 		//Define motor controllers for drive train on test chassis
-		frontLeft = new TalonSRX(RobotMap.DRIVE_FRONT_LEFT_TAlON);
-    	frontRight = new TalonSRX(RobotMap.DRIVE_FRONT_RIGHT_TALON);
-    	backLeft = new TalonSRX(RobotMap.DRIVE_BACK_LEFT_TALON);
-    	backRight = new TalonSRX(RobotMap.DRIVE_BACK_RIGHT_TALON);
+		//frontLeft = new TalonSRX(RobotMap.DRIVE_FRONT_LEFT_TAlON);
+    	//frontRight = new TalonSRX(RobotMap.DRIVE_FRONT_RIGHT_TALON);
+    	//backLeft = new TalonSRX(RobotMap.DRIVE_BACK_LEFT_TALON);
+    	//backRight = new TalonSRX(RobotMap.DRIVE_BACK_RIGHT_TALON);
     	
     	/* Define motor controllers for drive train on main chassis
     	 * Need this because FIRST only has TALON plugins and they have no idea what its like trying to find and install plugins from third party sites that look fairly sketchy and don't really install right and why can't just add the commonly used motor controllers that they have in their FIRST Choice Program
@@ -85,10 +85,10 @@ public class Drive extends Subsystem {
 	
 	ControlMode iJustWantToSleep = ControlMode.PercentOutput;
 	public void drive(double hPower, double vPower, double turn) {
-        frontLeft.set(iJustWantToSleep, (vPower - hPower + (turn * turnPowerCoefficient)) * voltageCoefficient);
-        frontRight.set(iJustWantToSleep, (vPower + hPower + (turn * turnPowerCoefficient)) * voltageCoefficient);
-         backLeft.set(iJustWantToSleep, (-vPower - hPower + (turn * turnPowerCoefficient)) * voltageCoefficient);
-        backRight.set(iJustWantToSleep, (vPower - hPower + (turn * turnPowerCoefficient)) * voltageCoefficient);
+        //frontLeft.set(iJustWantToSleep, (vPower - hPower + (turn * turnPowerCoefficient)) * voltageCoefficient);
+        //frontRight.set(iJustWantToSleep, (vPower + hPower + (turn * turnPowerCoefficient)) * voltageCoefficient);
+         //backLeft.set(iJustWantToSleep, (-vPower - hPower + (turn * turnPowerCoefficient)) * voltageCoefficient);
+        //backRight.set(iJustWantToSleep, (vPower - hPower + (turn * turnPowerCoefficient)) * voltageCoefficient);
     }
 	
 	public void stop() {
