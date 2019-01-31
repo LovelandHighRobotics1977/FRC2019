@@ -8,8 +8,6 @@
 package frc.robot;
 
 import frc.robot.input.XBoxController;
-import frc.robot.commands.shooter.*;
-import frc.robot.commands.servo.*;
 
 /**
  * This class is the glue that binds the controls on the physical operator
@@ -65,10 +63,6 @@ public class OI {
 		//driveJoystick.leftWhileHeld(new TurnTime(100,1));
 		//180 turn function
 		//driveJoystick.rightWhenPressed(new TurnTime(500,1)); //THIS NEEDS TO BE Adjusted
-		driveJoystick.rightWhenPressed(new ShooterShoot());
-		driveJoystick.leftWhenPressed(new ShooterSuck());
-		driveJoystick.aWhenPressed(new ServoServ());
-		driveJoystick.bWhenPressed(new ServoBack());
 	}
 	
 	public static OI getInstance() {

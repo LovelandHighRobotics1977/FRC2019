@@ -1,10 +1,7 @@
 package frc.robot.commands;
 
 import frc.robot.OI;
-import frc.robot.subsystems.ArmServo;
-import frc.robot.subsystems.Drive;
 import frc.robot.subsystems.Pneumatic;
-import frc.robot.subsystems.Shooter;
 
 import edu.wpi.first.wpilibj.command.Command;
 
@@ -14,9 +11,6 @@ public abstract class CommandBase extends Command {
 	 * Inherited static access to the OI.
 	 */
 	protected static OI oi;
-	protected static Drive drive;
-	protected static Shooter shooter;
-	protected static ArmServo armservo;
 	protected static Pneumatic pneumatic;
 
 	
@@ -27,14 +21,8 @@ public abstract class CommandBase extends Command {
 	 */
 	
 	public static void init() {
-		drive = Drive.getInstance();
 		oi = OI.getInstance();
-		shooter = Shooter.getInstance();
-		armservo = ArmServo.getInstance();
 		pneumatic = Pneumatic.getInstance();
-		if(shooter == null) {
-			System.out.println("Shooter in NULL in init");
-		}
 		
 	}
 }
