@@ -9,6 +9,7 @@ public class Pneumatic extends Subsystem{
 	public static Pneumatic instance;
 	private Compressor compressor1;
 	DoubleSolenoid piston1;
+	//If using a Spike, need a Relay object
 
 	
 	Pneumatic(){
