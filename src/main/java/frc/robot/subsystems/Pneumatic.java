@@ -2,21 +2,24 @@ package frc.robot.subsystems;
 
 
 import edu.wpi.first.wpilibj.Compressor;
+import edu.wpi.first.wpilibj.Relay;
 import edu.wpi.first.wpilibj.DoubleSolenoid;
 import edu.wpi.first.wpilibj.command.Subsystem;
 
 public class Pneumatic extends Subsystem{
 	public static Pneumatic instance;
 	private Compressor compressor1;
+	Relay compressorRelay = new Relay(1);
 	DoubleSolenoid piston1;
 	//If using a Spike, need a Relay object
-
+	
 	
 	Pneumatic(){
 		piston1 = new DoubleSolenoid(6, 7);
 		compressor1 = new Compressor(0);
-        compressor1.setClosedLoopControl(true);
-		compressor1.start();
+		compressor1.setClosedLoopControl(true);
+		compressorRelay.set(Relay.Value.kOn);
+		//compressor1.start();
 		System.out.print("Compressing running? " + compressor1.enabled());
 	}
 	
@@ -37,7 +40,8 @@ public class Pneumatic extends Subsystem{
 	}
 	
 	public void stop() {
-		piston1.set(DoubleSolenoid.Value.kOff);;
+		piston1.set(DoubleSolenoid.Value.kOff);
+		compressorRelay.set(Relay.Value.kOff);
 	}
 	
 	/*public void startClosedLoop(){
