@@ -1,5 +1,6 @@
 package frc.robot.subsystems;
 import edu.wpi.first.wpilibj.command.Subsystem;
+import frc.robot.RobotMap;
 import edu.wpi.first.wpilibj.VictorSP;
 
 public class Shooter extends Subsystem {
@@ -9,7 +10,7 @@ public class Shooter extends Subsystem {
 	private VictorSP ShooterMotor;
 	
 	Shooter(){
-		ShooterMotor = new VictorSP(0);
+		ShooterMotor = new VictorSP(RobotMap.SHOOTER_MOTOR);
 	}
 	public static Shooter getInstance() {
 		if (instance == null) {

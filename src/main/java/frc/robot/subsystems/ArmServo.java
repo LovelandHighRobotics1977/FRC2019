@@ -1,14 +1,14 @@
 package frc.robot.subsystems;
 import edu.wpi.first.wpilibj.command.Subsystem;
+import frc.robot.RobotMap;
 import edu.wpi.first.wpilibj.Servo;
 
 public class ArmServo extends Subsystem{
 
     public static ArmServo instance;
 	public Servo servoOne;
-	public static int servoID = 9;
 	ArmServo(){
-		servoOne = new Servo(servoID);
+		servoOne = new Servo(RobotMap.ARM_SERVO);
 	}
 	public static ArmServo getInstance() {
 		if (instance == null) {
