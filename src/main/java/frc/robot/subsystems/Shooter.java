@@ -6,7 +6,6 @@ public class Shooter extends Subsystem {
 	
 	
 	public static Shooter instance;
-	//private Relay rollerMotor;
 	private VictorSP ShooterMotor;
 	
 	Shooter(){

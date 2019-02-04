@@ -19,7 +19,7 @@ public class ArmServo extends Subsystem{
 
 	
 	public void rotate(){
-		servoOne.setAngle(180);
+		servoOne.setAngle(90);
 	}
 
 	public void reset(){
