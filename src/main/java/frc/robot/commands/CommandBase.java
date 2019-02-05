@@ -1,6 +1,7 @@
 package frc.robot.commands;
 
 import frc.robot.OI;
+import frc.robot.subsystems.ArmMotor;
 import frc.robot.subsystems.ArmServo;
 import frc.robot.subsystems.Drive;
 import frc.robot.subsystems.Pneumatic;
@@ -18,6 +19,7 @@ public abstract class CommandBase extends Command {
 	protected static Shooter shooter;
 	protected static ArmServo armservo;
 	protected static Pneumatic pneumatic;
+	protected static ArmMotor armMotor;
 
 	
 	/**
@@ -32,6 +34,7 @@ public abstract class CommandBase extends Command {
 		shooter = Shooter.getInstance();
 		armservo = ArmServo.getInstance();
 		pneumatic = Pneumatic.getInstance();
+		armMotor = ArmMotor.getInstance();
 		if(shooter == null) {
 			System.out.println("Shooter in NULL in init");
 		}
