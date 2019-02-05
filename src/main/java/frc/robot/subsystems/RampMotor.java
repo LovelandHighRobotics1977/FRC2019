@@ -7,34 +7,34 @@ import com.ctre.phoenix.motorcontrol.can.TalonSRX;
 
 import edu.wpi.first.wpilibj.VictorSP;
 
-public class ArmMotor extends Subsystem {
+public class RampMotor extends Subsystem {
 	
 	
-	public static ArmMotor instance;
-    private TalonSRX ArmMotor;
+	public static RampMotor instance;
+    private TalonSRX RampMotor;
     private ControlMode TalonControlMode = ControlMode.PercentOutput;
 	
-	ArmMotor(){
-		ArmMotor = new TalonSRX(RobotMap.ARM_MOTOR);
+	RampMotor(){
+		RampMotor = new TalonSRX(RobotMap.RAMP_MOTOR);
 	}
-	public static ArmMotor getInstance() {
+	public static RampMotor getInstance() {
 		if (instance == null) {
-    		instance = new ArmMotor();
+    		instance = new RampMotor();
     	}
     	return instance;
 	}
 	
 	public void moveForward() {
-		ArmMotor.set(TalonControlMode, -.50);
+		RampMotor.set(TalonControlMode, -.50);
 	}
 	
 	public void moveBackward() {
-		ArmMotor.set(TalonControlMode, .50);
+		RampMotor.set(TalonControlMode, .50);
 	}
 	
 	public void stop() {
-		//System.out.println(ArmMotor.get());
-		ArmMotor.set(TalonControlMode, 0);
+		//System.out.println(RampMotor.get());
+		RampMotor.set(TalonControlMode, 0);
 	}
 	@Override
 	protected void initDefaultCommand() {
