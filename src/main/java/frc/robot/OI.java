@@ -67,12 +67,13 @@ public class OI {
 		//driveJoystick.leftWhileHeld(new TurnTime(100,1));
 		//180 turn function
 		//driveJoystick.rightWhenPressed(new TurnTime(500,1)); //THIS NEEDS TO BE Adjusted
-		driveJoystick.aWhenPressed(new ShooterShoot(1));
-		driveJoystick.bWhenPressed(new ShooterShoot(2));
-		driveJoystick.xWhenPressed(new ShooterShoot(3));
-		driveJoystick.yWhenPressed(new ShooterSuck());
+		driveJoystick.aWhileHeld(new ShooterShoot(1));
+		driveJoystick.bWhileHeld(new ShooterShoot(2));
+		driveJoystick.xWhileHeld(new ShooterShoot(3));
+		driveJoystick.yWhileHeld(new ShooterSuck());
 		driveJoystick.leftWhenPressed(new ServoServ());
 		driveJoystick.rightWhenPressed(new ServoBack());
+		//auxJoystick.rightThumbWhileHeld(command);
 	}
 	
 	public static OI getInstance() {

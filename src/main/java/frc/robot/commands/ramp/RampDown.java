@@ -1,25 +1,25 @@
-package frc.robot.commands.pneumatic;
+package frc.robot.commands.ramp;
 
 import frc.robot.commands.CommandBase;
 
-public class PneumaticDown extends CommandBase{
+public class RampDown extends CommandBase{
+	
 	long startTime;
 	long endTime;
-	long commandTime = 5000;
+	long commandTime = 500;
 	
-	public PneumaticDown() {
-		requires(pneumatic);
-
+	public RampDown(){
+		
+		requires(ramp);
 	}
 	
 	protected void initialize() {
-		System.out.println("Pneumatic going down!");
 		startTime = System.currentTimeMillis();
     	endTime = startTime + commandTime;
     }
 	
 	public void execute() {	
-		pneumatic.lower();	
+		armMotor.moveBackward();	
 	}
 	
 	protected boolean isFinished() {
@@ -27,11 +27,10 @@ public class PneumaticDown extends CommandBase{
 	}
 	
 	protected void interrupted() {
-		pneumatic.stop();
+		armMotor.stop();
 	}
 	
 	protected void end() {
-		pneumatic.stop();
+		armMotor.stop();
 	}
-
 }
