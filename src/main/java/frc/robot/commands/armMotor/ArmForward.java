@@ -9,20 +9,12 @@ public class ArmForward extends CommandBase{
 	long commandTime = 1000;
 	
 	public ArmForward() {
-		// This was to test an error with shooter being null
-//		if(shooter == null) {
-//			for(int i = 0; i < 6; i++) {
-//				System.out.println("Shooter is NULL.");
-//			}
-//			return;
-//		}
 		requires(shooter);
 	}
 	
 	protected void initialize() {
 		startTime = System.currentTimeMillis();
     	endTime = startTime + commandTime;
-    	//System.out.println("Roller is rolling");
     }
 	
 	public void execute() {	

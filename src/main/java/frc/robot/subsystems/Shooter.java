@@ -8,6 +8,7 @@ public class Shooter extends Subsystem {
 	
 	public static Shooter instance;
 	private VictorSP ShooterMotor;
+	private int shooterPower = 0;
 	
 	Shooter(){
 		ShooterMotor = new VictorSP(RobotMap.SHOOTER_MOTOR);
@@ -20,7 +21,7 @@ public class Shooter extends Subsystem {
 	}
 	
 	public void shoot() {
-		ShooterMotor.set(-.30);
+		ShooterMotor.set(shooterPower * -.30);
 	}
 	
 	public void suck() {
@@ -30,6 +31,14 @@ public class Shooter extends Subsystem {
 	public void stop() {
 		System.out.println(ShooterMotor.get());
 		ShooterMotor.stopMotor();
+	}
+
+	public void setPower(int power){
+		shooterPower = power;
+	}
+
+	public int getPower(){
+		return shooterPower;
 	}
 	@Override
 	protected void initDefaultCommand() {

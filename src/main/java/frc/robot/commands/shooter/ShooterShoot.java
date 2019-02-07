@@ -8,7 +8,7 @@ public class ShooterShoot extends CommandBase{
 	long endTime;
 	long commandTime = 1000;
 	
-	public ShooterShoot() {
+	public ShooterShoot(int power) {
 		// This was to test an error with shooter being null
 //		if(shooter == null) {
 //			for(int i = 0; i < 6; i++) {
@@ -16,6 +16,7 @@ public class ShooterShoot extends CommandBase{
 //			}
 //			return;
 //		}
+		shooter.setPower(power);
 		requires(shooter);
 	}
 	
@@ -26,7 +27,7 @@ public class ShooterShoot extends CommandBase{
     }
 	
 	public void execute() {	
-		shooter.shoot();	
+		shooter.shoot();
 	}
 	
 	protected boolean isFinished() {

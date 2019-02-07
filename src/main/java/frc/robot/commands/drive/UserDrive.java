@@ -29,6 +29,20 @@ public class UserDrive extends CommandBase {
 			turn = 0;
 		}
 		drive.drive(-hPower, -vPower, -turn);
+
+		//boolean aButton = 
+		/*if(oi.getDriveJoystick().getAButtonValue()){
+			shooter.setPower(1);
+		}
+		else if(oi.getDriveJoystick().getXButtonValue()){
+			shooter.setPower(2);
+		}
+		else if(oi.getDriveJoystick().getBButtonValue()){
+			shooter.setPower(3);
+		}
+		else{
+			shooter.setPower(0);
+		}*/
 		
 	}
 	

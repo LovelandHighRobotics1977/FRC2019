@@ -5,8 +5,6 @@ import frc.robot.RobotMap;
 import com.ctre.phoenix.motorcontrol.ControlMode;
 import com.ctre.phoenix.motorcontrol.can.TalonSRX;
 
-import edu.wpi.first.wpilibj.VictorSP;
-
 public class ArmMotor extends Subsystem {
 	
 	

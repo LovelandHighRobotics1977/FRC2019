@@ -48,10 +48,12 @@ public class OI {
 	private static OI instance;
 	// XBox Controller references
 	private XBoxController driveJoystick;
+	private XBoxController auxJoystick;
 	//Other joystick will be put here as well
 	
 	public OI() {
 		driveJoystick = new XBoxController(0);
+		auxJoystick = new XBoxController(1);
 		//Set other controller here once we know if it is used 
 		//manipulatorJoystick = new XBoxController(1);
 	}
@@ -65,10 +67,12 @@ public class OI {
 		//driveJoystick.leftWhileHeld(new TurnTime(100,1));
 		//180 turn function
 		//driveJoystick.rightWhenPressed(new TurnTime(500,1)); //THIS NEEDS TO BE Adjusted
-		driveJoystick.rightWhenPressed(new ShooterShoot());
-		driveJoystick.leftWhenPressed(new ShooterSuck());
-		driveJoystick.aWhenPressed(new ServoServ());
-		driveJoystick.bWhenPressed(new ServoBack());
+		driveJoystick.aWhenPressed(new ShooterShoot(1));
+		driveJoystick.bWhenPressed(new ShooterShoot(2));
+		driveJoystick.xWhenPressed(new ShooterShoot(3));
+		driveJoystick.yWhenPressed(new ShooterSuck());
+		driveJoystick.leftWhenPressed(new ServoServ());
+		driveJoystick.rightWhenPressed(new ServoBack());
 	}
 	
 	public static OI getInstance() {
