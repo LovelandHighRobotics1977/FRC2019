@@ -29,7 +29,7 @@ public class RobotMap {
 	public static final int DRIVE_BACK_LEFT_TALON= 2;
 	public static final int DRIVE_BACK_RIGHT_TALON = 3;
 	public static final int SHOOTER_MOTOR = 8;
-	public static final int ARM_SERVO = 1;
+	public static final int ARM_SERVO = 0;
 	public static final int ARM_MOTOR = 9; 
 	public static final int RAMP_MOTOR = 6;
 	

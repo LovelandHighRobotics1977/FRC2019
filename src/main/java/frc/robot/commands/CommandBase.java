@@ -5,7 +5,7 @@ import frc.robot.subsystems.ArmMotor;
 import frc.robot.subsystems.ArmServo;
 import frc.robot.subsystems.Drive;
 //import frc.robot.subsystems.Pneumatic;
-import frc.robot.subsystems.RampMotor;
+//import frc.robot.subsystems.RampMotor;
 import frc.robot.subsystems.Shooter;
 
 import edu.wpi.first.wpilibj.command.Command;
@@ -21,7 +21,7 @@ public abstract class CommandBase extends Command {
 	protected static ArmServo armservo;
 	//protected static Pneumatic pneumatic;
 	protected static ArmMotor armMotor;
-	protected static RampMotor ramp;
+	//protected static RampMotor ramp;
 
 	
 	/**
