@@ -20,10 +20,12 @@ public class ArmServo extends Subsystem{
 	
 	public void rotate(){
 		servoOne.setAngle(110);
+		System.out.println("Servo going");
 	}
 
 	public void reset(){
 		servoOne.setAngle(0);
+		System.out.println("Servo going other way");
 	}
 
 	public void stop(){
@@ -34,7 +36,6 @@ public class ArmServo extends Subsystem{
 	@Override
 	protected void initDefaultCommand() {
 		// Auto-generated method stub
-		return;
 	}
 
 

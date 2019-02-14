@@ -21,6 +21,7 @@ public class Shooter extends Subsystem {
 	}
 	
 	public void shoot() {
+		System.out.println("Shootee is goee");
 		ShooterMotor.set(shooterPower * -.30);
 	}
 	
