@@ -10,7 +10,10 @@ package frc.robot;
 import frc.robot.input.XBoxController;
 import frc.robot.commands.shooter.*;
 import frc.robot.commands.servo.*;
+import frc.robot.commands.armMotor.ArmBack;
+import frc.robot.commands.armMotor.ArmForward;
 import frc.robot.commands.drive.*;
+import frc.robot.commands.armMotor.*;
 
 /**
  * This class is the glue that binds the controls on the physical operator
@@ -74,6 +77,8 @@ public class OI {
 		driveJoystick.yWhileHeld(new ShooterSuck());
 		auxJoystick.xWhenPressed(new ServoServ());
 		auxJoystick.bWhenPressed(new ServoBack());
+		auxJoystick.rightWhenPressed(new ArmBack());
+		auxJoystick.leftWhenPressed(new ArmForward());
 		//auxJoystick.rightThumbWhileHeld(command);
 	}
 	
