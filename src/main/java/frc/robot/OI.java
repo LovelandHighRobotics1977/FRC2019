@@ -64,16 +64,16 @@ public class OI {
 		//Speed toggle
 		//driveJoystick.leftWhenPressed(new SpeedToggle());
 		//Turn functions for shoulders
-		driveJoystick.rightWhileHeld(new TurnTime(100,-1));
-		driveJoystick.leftWhileHeld(new TurnTime(100,1));
+		driveJoystick.rightWhileHeld(new TurnTime(500,-1));
+		driveJoystick.leftWhileHeld(new TurnTime(500,1));
 		//180 turn function
 		//driveJoystick.rightWhenPressed(new TurnTime(500,1)); //THIS NEEDS TO BE Adjusted
 		driveJoystick.aWhileHeld(new ShooterShoot(1));
 		driveJoystick.bWhileHeld(new ShooterShoot(2));
 		driveJoystick.xWhileHeld(new ShooterShoot(3));
 		driveJoystick.yWhileHeld(new ShooterSuck());
-		driveJoystick.leftWhenPressed(new ServoServ());
-		driveJoystick.rightWhenPressed(new ServoBack());
+		auxJoystick.xWhenPressed(new ServoServ());
+		auxJoystick.bWhenPressed(new ServoBack());
 		//auxJoystick.rightThumbWhileHeld(command);
 	}
 	
