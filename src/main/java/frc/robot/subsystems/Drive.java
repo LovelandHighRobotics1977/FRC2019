@@ -87,8 +87,8 @@ public class Drive extends Subsystem {
 	public void drive(double hPower, double vPower, double turn) {
         frontLeft.set(iJustWantToSleep, (vPower - hPower + (turn * turnPowerCoefficient)) * voltageCoefficient);
         frontRight.set(iJustWantToSleep, (vPower + hPower + (turn * turnPowerCoefficient)) * voltageCoefficient);
-         backLeft.set(iJustWantToSleep, (-vPower - hPower + (turn * turnPowerCoefficient)) * voltageCoefficient);
-        backRight.set(iJustWantToSleep, (vPower - hPower + (turn * turnPowerCoefficient)) * voltageCoefficient);
+        backLeft.set(iJustWantToSleep, (-vPower - hPower + (turn * turnPowerCoefficient)) * voltageCoefficient);
+        backRight.set(iJustWantToSleep, (-vPower + hPower + (turn * turnPowerCoefficient)) * voltageCoefficient);
     }
 	
 	public void stop() {
@@ -96,6 +96,7 @@ public class Drive extends Subsystem {
     }
 	
 	public boolean isSpeedToggle() {
+		
     	return speedToggle;
     }
     
