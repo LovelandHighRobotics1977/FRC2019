@@ -6,7 +6,7 @@ public class ArmForward extends CommandBase{
 	
 	long startTime;
 	long endTime;
-	long commandTime = 1000;
+	long commandTime = 150;
 	
 	public ArmForward() {
 		requires(shooter);

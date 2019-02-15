@@ -6,7 +6,7 @@ public class ArmBack extends CommandBase{
 	
 	long startTime;
 	long endTime;
-	long commandTime = 500;
+	long commandTime = 150;
 	
 	public ArmBack() {
 		

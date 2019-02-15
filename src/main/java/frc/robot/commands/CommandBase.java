@@ -36,7 +36,7 @@ public abstract class CommandBase extends Command {
 		shooter = Shooter.getInstance();
 		armservo = ArmServo.getInstance();
 		//pneumatic = Pneumatic.getInstance();
-		//armMotor = ArmMotor.getInstance();
+		armMotor = ArmMotor.getInstance();
 		//ramp = RampMotor.getInstance();
 		if(shooter == null) {
 			System.out.println("Shooter in NULL in init");

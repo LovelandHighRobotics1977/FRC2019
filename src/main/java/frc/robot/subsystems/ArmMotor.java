@@ -23,11 +23,11 @@ public class ArmMotor extends Subsystem {
 	}
 	
 	public void moveForward() {
-		ArmMotor.set(TalonControlMode, -.50);
+		ArmMotor.set(TalonControlMode, -.20);
 	}
 	
 	public void moveBackward() {
-		ArmMotor.set(TalonControlMode, .50);
+		ArmMotor.set(TalonControlMode, .20);
 	}
 	
 	public void stop() {
