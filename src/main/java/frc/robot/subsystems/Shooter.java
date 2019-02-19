@@ -36,7 +36,7 @@ public class Shooter extends Subsystem {
 	}
 	
 	public void suck() {
-		ShooterMotor.set(TalonControlMode, .30);
+		ShooterMotor.set(TalonControlMode, .05);
 	}
 	
 	public void stop() {
