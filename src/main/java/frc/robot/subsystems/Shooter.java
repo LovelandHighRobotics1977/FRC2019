@@ -1,17 +1,22 @@
 package frc.robot.subsystems;
 import edu.wpi.first.wpilibj.command.Subsystem;
 import frc.robot.RobotMap;
+
+import com.ctre.phoenix.motorcontrol.ControlMode;
+import com.ctre.phoenix.motorcontrol.can.TalonSRX;
+
 import edu.wpi.first.wpilibj.VictorSP;
 
 public class Shooter extends Subsystem {
 	
 	
 	public static Shooter instance;
-	private VictorSP ShooterMotor;
+	private TalonSRX ShooterMotor;
 	private int shooterPower = 0;
+	private ControlMode TalonControlMode = ControlMode.PercentOutput;
 	
 	Shooter(){
-		ShooterMotor = new VictorSP(RobotMap.SHOOTER_MOTOR);
+		ShooterMotor = new TalonSRX(RobotMap.SHOOTER_MOTOR);
 	}
 	public static Shooter getInstance() {
 		if (instance == null) {
@@ -21,17 +26,22 @@ public class Shooter extends Subsystem {
 	}
 	
 	public void shoot() {
-		System.out.println("Shootee is goee");
-		ShooterMotor.set(shooterPower * -.30);
+		System.out.println("Shootee is goee with " + shooterPower * .30);
+		if(shooterPower == 3){
+			ShooterMotor.set(TalonControlMode, -1.00);
+		}
+		else{
+			ShooterMotor.set(TalonControlMode, shooterPower * -.30);
+		}
 	}
 	
 	public void suck() {
-		ShooterMotor.set(.30);
+		ShooterMotor.set(TalonControlMode, .30);
 	}
 	
 	public void stop() {
-		System.out.println(ShooterMotor.get());
-		ShooterMotor.stopMotor();
+		//System.out.println(ShooterMotor.get());
+		ShooterMotor.set(TalonControlMode, 0);;
 	}
 
 	public void setPower(int power){
