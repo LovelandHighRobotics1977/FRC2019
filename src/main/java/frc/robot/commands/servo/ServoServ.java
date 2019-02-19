@@ -6,7 +6,7 @@ public class ServoServ extends CommandBase{
 
     long startTime;
 	long endTime;
-	long commandTime = 1000;
+	long commandTime = 10000000;
 
     public ServoServ (){
         requires(armservo);

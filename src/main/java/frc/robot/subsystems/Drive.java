@@ -19,7 +19,8 @@ public class Drive extends Subsystem {
 	
 	private static Drive instance;
 	//used for getInstance
-	
+	int directCoefficient = 1;
+	private boolean direction = true;
 	private boolean speedToggle = false;
 	//for speedToggle function to halve speed
 	
@@ -85,10 +86,10 @@ public class Drive extends Subsystem {
 	
 	ControlMode iJustWantToSleep = ControlMode.PercentOutput;
 	public void drive(double hPower, double vPower, double turn) {
-        frontLeft.set(iJustWantToSleep, (vPower - hPower + (turn * turnPowerCoefficient)) * voltageCoefficient);
-        frontRight.set(iJustWantToSleep, (vPower + hPower + (turn * turnPowerCoefficient)) * voltageCoefficient);
-        backLeft.set(iJustWantToSleep, (-vPower - hPower + (turn * turnPowerCoefficient)) * voltageCoefficient);
-        backRight.set(iJustWantToSleep, (-vPower + hPower + (turn * turnPowerCoefficient)) * voltageCoefficient);
+        frontLeft.set(iJustWantToSleep, (vPower - hPower + (turn * turnPowerCoefficient)) * voltageCoefficient * directCoefficient);
+        frontRight.set(iJustWantToSleep, (vPower + hPower + (turn * turnPowerCoefficient)) * voltageCoefficient * directCoefficient);
+        backLeft.set(iJustWantToSleep, (-vPower - hPower + (turn * turnPowerCoefficient)) * voltageCoefficient * directCoefficient);
+        backRight.set(iJustWantToSleep, (-vPower + hPower + (turn * turnPowerCoefficient)) * voltageCoefficient * directCoefficient);
     }
 	
 	public void stop() {
@@ -107,5 +108,20 @@ public class Drive extends Subsystem {
     	} else {
     		voltageCoefficient = 1.0;
     	}
+	}
+	
+	public boolean isForward() {
+		
+    	return this.direction;
+    }
+    
+    public void setDirection(boolean direction) {
+    	this.direction = direction;
+    	if (direction) {
+    		directCoefficient = 1;
+    	} else {
+    		directCoefficient = -1;
+		}
+		System.out.println("Direction is " + directCoefficient);
     }
 }
