@@ -9,7 +9,7 @@ public class ArmForward extends CommandBase{
 	long commandTime = 150;
 	
 	public ArmForward() {
-		requires(shooter);
+		requires(armMotor);
 	}
 	
 	protected void initialize() {

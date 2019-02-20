@@ -16,8 +16,8 @@ public class RampMotor extends Subsystem {
     private ControlMode TalonControlMode = ControlMode.PercentOutput;
 	
 	RampMotor(){
-        RampMotorOne = new Relay(2);
-        RampMotorTwo = new Relay(3);
+        	RampMotorOne = new Relay(2);
+        	RampMotorTwo = new Relay(3);
 	}
 	public static RampMotor getInstance() {
 		if (instance == null) {
@@ -27,19 +27,19 @@ public class RampMotor extends Subsystem {
 	}
 	
 	public void letDown() {
-        RampMotorOne.set(Relay.Value.kForward);
-        RampMotorTwo.set(Relay.Value.kReverse);
+        	RampMotorOne.set(Relay.Value.kForward);
+        	RampMotorTwo.set(Relay.Value.kReverse);
 	}
 	
 	public void bringUp() {
-        RampMotorOne.set(Relay.Value.kReverse);
-        RampMotorTwo.set(Relay.Value.kForward);
+        	RampMotorOne.set(Relay.Value.kReverse);
+        	RampMotorTwo.set(Relay.Value.kForward);
 	}
 	
 	public void stop() {
 		//System.out.println(RampMotor.get());
-        RampMotorOne.set(Relay.Value.kOff);
-        RampMotorTwo.set(Relay.Value.kOff);
+        	RampMotorOne.set(Relay.Value.kOff);
+        	RampMotorTwo.set(Relay.Value.kOff);
 	}
 	@Override
 	protected void initDefaultCommand() {

@@ -10,7 +10,7 @@ public class ArmBack extends CommandBase{
 	
 	public ArmBack() {
 		
-		requires(shooter);
+		requires(armMotor);
 	}
 	
 	protected void initialize() {

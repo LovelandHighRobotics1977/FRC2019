@@ -7,6 +7,9 @@
 
 package frc.robot;
 
+import com.ctre.phoenix.motorcontrol.ControlMode;
+import com.ctre.phoenix.motorcontrol.can.TalonSRX;
+
 /**
  * The RobotMap is a mapping from the ports sensors and actuators are wired into
  * to a variable name. This provides flexibility changing wiring, makes checking
@@ -23,7 +26,7 @@ public class RobotMap {
 	// number and the module. For example you with a rangefinder:
 	// public static int rangefinderPort = 1;
 	// public static int rangefinderModule = 1;
-	
+	public static final ControlMode TALON_MODE= ControlMode.PercentOutput;
 	public static final int ARM_MOTOR = 5; 
 	public static final int SHOOTER_MOTOR = 13;
 	public static final int DRIVE_FRONT_LEFT_TAlON = 1;
@@ -31,7 +34,7 @@ public class RobotMap {
 	public static final int DRIVE_BACK_LEFT_TALON= 2;
 	public static final int DRIVE_BACK_RIGHT_TALON = 3;
 	public static final int ARM_SERVO = 4;
-	//public static final int RAMP_MOTOR = 6;
+	public static final int RAMP_MOTOR = 6;
 	
 		public static final int XBOX_LEFT_X = 0;
 		/**

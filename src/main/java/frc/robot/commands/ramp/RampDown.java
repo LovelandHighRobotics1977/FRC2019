@@ -5,7 +5,7 @@ public class RampDown extends CommandBase{
 	
 	long startTime;
 	long endTime;
-	long commandTime = 150;
+	long commandTime = 250;
 	
 	public RampDown() {
 		requires(ramp);
