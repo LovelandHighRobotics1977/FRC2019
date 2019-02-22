@@ -1,5 +1,6 @@
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
     "currentLanguage": "none",
     "enableCppIntellisense": false,
     "projectYear": "none",
@@ -8,5 +9,10 @@
     "currentLanguage": "java",
     "projectYear": "2019",
 >>>>>>> 98ad3028b30c139818777fd4938cb6836872dddd
+=======
+    "enableCppIntellisense": false,
+    "currentLanguage": "java",
+    "projectYear": "2019",
+>>>>>>> tempBranch
     "teamNumber": 1977
 }

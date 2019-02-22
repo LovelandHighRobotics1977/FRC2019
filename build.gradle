@@ -1,9 +1,16 @@
 plugins {
     id "java"
+<<<<<<< HEAD
     id "edu.wpi.first.GradleRIO" version "2019.1.1"
 }
 
 def ROBOT_MAIN_CLASS = "org.usfirst.frc.team1977.robot.Main"
+=======
+    id "edu.wpi.first.GradleRIO" version "2019.2.1"
+}
+
+def ROBOT_MAIN_CLASS = "frc.robot.Main"
+>>>>>>> tempBranch
 
 // Define my targets (RoboRIO) and artifacts (deployable files)
 // This is added by GradleRIO's backing project EmbeddedTools.
@@ -35,7 +42,11 @@ deploy {
 }
 
 // Set this to true to enable desktop support.
+<<<<<<< HEAD
 def includeDesktopSupport = true
+=======
+def includeDesktopSupport = false
+>>>>>>> tempBranch
 
 // Maven central needed for JUnit
 repositories {
