@@ -10,12 +10,19 @@ public class UserDrive extends CommandBase {
 	public UserDrive() {
 		requires(drive);
 	}
-	
+	private int turnDirection = 1;
+
 	protected void execute() {
 		double hPower = oi.getDriveJoystick().getLeftX();
 		double vPower = oi.getDriveJoystick().getLeftY();
 		double turn = (oi.getDriveJoystick().getLeftTriggerAxis() * 0.7)
 				- (oi.getDriveJoystick().getRightTriggerAxis() * 0.7);
+		if (drive.isForward()) {
+			turnDirection = 1;
+		} else {
+			turnDirection = -1;
+		}
+
 		
 		if (Math.abs(hPower) < .2) {
 			hPower = 0;
@@ -28,7 +35,7 @@ public class UserDrive extends CommandBase {
 		if (Math.abs(turn) < .2) {
 			turn = 0;
 		}
-		drive.drive(-hPower, -vPower, -turn);
+		drive.drive(-hPower, -vPower, -turn * turnDirection);
 
 		//boolean aButton = 
 		/*if(oi.getDriveJoystick().getAButtonValue()){
@@ -45,7 +52,7 @@ public class UserDrive extends CommandBase {
 		}*/
 		
 	}
-	
+
 	// Make this return true when this Command no longer needs to run execute()
     protected boolean isFinished() {
         return false;
