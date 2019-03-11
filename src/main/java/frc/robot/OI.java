@@ -15,6 +15,7 @@ import frc.robot.commands.armMotor.ArmForward;
 import frc.robot.commands.drive.*;
 import frc.robot.commands.armMotor.*;
 import frc.robot.commands.ramp.*;
+import frc.robot.commands.autonomous.*;
 
 /**
  * This class is the glue that binds the controls on the physical operator
@@ -85,6 +86,7 @@ public class OI {
 		auxJoystick.leftWhileHeld(new ArmForward());
 		auxJoystick.yWhenPressed(new RampUp());
 		auxJoystick.aWhenPressed(new RampDown());
+		auxJoystick.startWhenPressed(new CommandAutonomous());
 		//auxJoystick.rightThumbWhileHeld(command);
 	}
 	
