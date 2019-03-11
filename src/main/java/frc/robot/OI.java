@@ -78,6 +78,7 @@ public class OI {
 		driveJoystick.yWhileHeld(new ShooterSuck());
 		driveJoystick.rightWhenPressed(new DirectionToggle());
 		driveJoystick.leftWhenPressed(new SpeedToggle());
+		
 		auxJoystick.xWhenPressed(new ServoServ());
 		auxJoystick.bWhenPressed(new ServoBack());
 		auxJoystick.rightWhileHeld(new ArmBack());
