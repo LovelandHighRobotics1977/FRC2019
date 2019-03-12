@@ -1,12 +1,15 @@
 package frc.robot.subsystems;
+import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Subsystem;
 import frc.robot.RobotMap;
+import frc.robot.commands.servo.UserServo;
 import edu.wpi.first.wpilibj.Servo;
 
 public class ArmServo extends Subsystem{
 
     public static ArmServo instance;
 	public Servo servoOne;
+	Command userServo;
 	ArmServo(){
 		servoOne = new Servo(RobotMap.ARM_SERVO);
 	}
@@ -17,7 +20,12 @@ public class ArmServo extends Subsystem{
     	return instance;
 	}
 
-	
+	@Override
+	public void initDefaultCommand() {
+		userServo = new UserServo();
+		setDefaultCommand(userServo);
+	 }
+
 	public void rotate(){
 		servoOne.setAngle(110);
 		System.out.println("Servo going");
@@ -32,12 +40,6 @@ public class ArmServo extends Subsystem{
 		System.out.println(servoOne.get());
 		servoOne.stopMotor();
 	}
-
-	@Override
-	protected void initDefaultCommand() {
-		// Auto-generated method stub
-	}
-
 
 }
 
