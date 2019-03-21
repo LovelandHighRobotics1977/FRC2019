@@ -13,8 +13,8 @@ public class UserServo extends CommandBase {
 	
 	protected void execute() {
 
-        double leftTrigger = oi.getDriveJoystick().getLeftTriggerAxis();
-        double rightTrigger = oi.getDriveJoystick().getRightTriggerAxis();
+        double leftTrigger = oi.getAuxJoystick().getLeftTriggerAxis();
+        double rightTrigger = oi.getAuxJoystick().getRightTriggerAxis();
 		
 		if (leftTrigger > .5) {
 			armservo.rotate();

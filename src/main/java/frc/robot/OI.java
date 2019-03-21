@@ -73,15 +73,15 @@ public class OI {
 		//driveJoystick.leftWhileHeld(new TurnTime(500,1));
 		//180 turn function
 		//driveJoystick.rightWhenPressed(new TurnTime(500,1)); //THIS NEEDS TO BE Adjusted
-		driveJoystick.aWhileHeld(new ShooterShoot(1));
-		driveJoystick.bWhileHeld(new ShooterShoot(2));
-		driveJoystick.xWhileHeld(new ShooterShoot(3));
-		driveJoystick.yWhileHeld(new ShooterSuck());
+		auxJoystick.aWhileHeld(new ShooterShoot(1));
+		auxJoystick.bWhileHeld(new ShooterShoot(2));
+		auxJoystick.xWhileHeld(new ShooterShoot(3));
+		auxJoystick.yWhileHeld(new ShooterSuck());
 		driveJoystick.rightWhenPressed(new DirectionToggle());
 		driveJoystick.leftWhenPressed(new SpeedToggle());
 		
-		auxJoystick.xWhenPressed(new ServoServ());
-		auxJoystick.bWhenPressed(new ServoBack());
+		//auxJoystick.xWhenPressed(new ServoServ());
+		//auxJoystick.bWhenPressed(new ServoBack());
 		auxJoystick.rightWhileHeld(new ArmBack());
 		auxJoystick.leftWhileHeld(new ArmForward());
 		auxJoystick.yWhenPressed(new RampUp());
@@ -99,5 +99,9 @@ public class OI {
 	
 	public XBoxController getDriveJoystick() {
 		return driveJoystick;
+	}
+
+	public XBoxController getAuxJoystick(){
+		return auxJoystick;
 	}
 }
