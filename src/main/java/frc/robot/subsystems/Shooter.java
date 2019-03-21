@@ -28,7 +28,7 @@ public class Shooter extends Subsystem {
 	public void shoot() {
 		System.out.println("Shootee is goee with " + shooterPower * .30);
 		if(shooterPower == 3){
-			ShooterMotor.set(TalonControlMode, -1.00);
+			ShooterMotor.set(TalonControlMode, -0.8);
 		}
 		else{
 			ShooterMotor.set(TalonControlMode, shooterPower * -.30);
@@ -36,7 +36,7 @@ public class Shooter extends Subsystem {
 	}
 	
 	public void suck() {
-		ShooterMotor.set(TalonControlMode, .05);
+		ShooterMotor.set(TalonControlMode, .1);
 	}
 	
 	public void stop() {
