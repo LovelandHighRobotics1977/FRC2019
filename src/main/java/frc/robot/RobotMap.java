@@ -33,9 +33,9 @@ public class RobotMap {
 	public static final int DRIVE_FRONT_RIGHT_TALON = 2;
 	public static final int DRIVE_BACK_LEFT_TALON= 0;
 	public static final int DRIVE_BACK_RIGHT_TALON = 1;
-	public static final int ARM_SERVO = 4;
 	public static final int RAMP_MOTOR = 6;
-	
+	public static final int DISK_MOTOR = 4;
+
 		public static final int XBOX_LEFT_X = 0;
 		/**
 		 * The axis number for the left vertical axis of the XBox 360.
