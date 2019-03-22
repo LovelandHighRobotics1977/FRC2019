@@ -13,7 +13,7 @@ public class DiskMotor extends Subsystem {
     private ControlMode TalonControlMode = ControlMode.PercentOutput;
 	
 	DiskMotor(){
-		DiskMotor = new TalonSRX(RobotMap.ARM_MOTOR);
+		DiskMotor = new TalonSRX(RobotMap.DISK_MOTOR);
 	}
 	public static DiskMotor getInstance() {
 		if (instance == null) {
@@ -23,11 +23,11 @@ public class DiskMotor extends Subsystem {
 	}
 	
 	public void rotate() {
-		DiskMotor.set(TalonControlMode, -.30);
+		DiskMotor.set(TalonControlMode, -.10);
     }
     
     public void reset() {
-        DiskMotor.set(TalonControlMode, .30);
+        DiskMotor.set(TalonControlMode, .10);
     }
     
 	public void stop() {

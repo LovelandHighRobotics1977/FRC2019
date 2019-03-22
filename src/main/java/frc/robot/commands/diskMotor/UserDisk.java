@@ -22,7 +22,10 @@ public class UserDisk extends CommandBase {
 
 		else if (rightTrigger > .5) {
 			diskMotor.reset();
-		}
+        }
+        else{
+            diskMotor.stop();
+        }
 
 	}
 	
