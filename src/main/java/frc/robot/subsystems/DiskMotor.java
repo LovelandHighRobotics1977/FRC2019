@@ -1,6 +1,7 @@
 package frc.robot.subsystems;
 import edu.wpi.first.wpilibj.command.Subsystem;
 import frc.robot.RobotMap;
+import frc.robot.commands.diskMotor.UserDisk;
 
 import com.ctre.phoenix.motorcontrol.ControlMode;
 import com.ctre.phoenix.motorcontrol.can.TalonSRX;
@@ -9,7 +10,8 @@ public class DiskMotor extends Subsystem {
 	
 	
 	public static DiskMotor instance;
-    private TalonSRX DiskMotor;
+	private TalonSRX DiskMotor;
+	private UserDisk userDisk;
     private ControlMode TalonControlMode = ControlMode.PercentOutput;
 	
 	DiskMotor(){
@@ -23,11 +25,11 @@ public class DiskMotor extends Subsystem {
 	}
 	
 	public void rotate() {
-		DiskMotor.set(TalonControlMode, -.10);
+		DiskMotor.set(TalonControlMode, -.20);
     }
     
     public void reset() {
-        DiskMotor.set(TalonControlMode, .10);
+        DiskMotor.set(TalonControlMode, .20);
     }
     
 	public void stop() {
@@ -37,7 +39,8 @@ public class DiskMotor extends Subsystem {
 	@Override
 	protected void initDefaultCommand() {
 		// Auto-generated method stub
-		return;
+		userDisk = new UserDisk();
+	    setDefaultCommand(userDisk);
 	}
 
 

@@ -15,7 +15,8 @@ public class UserDisk extends CommandBase {
 
         double leftTrigger = oi.getAuxJoystick().getLeftTriggerAxis();
         double rightTrigger = oi.getAuxJoystick().getRightTriggerAxis();
-		
+        System.out.println("Left Trigger is " + leftTrigger);
+        System.out.println("Right Trigger is " + rightTrigger);
 		if (leftTrigger > .5) {
 			diskMotor.rotate();
 		}
