@@ -85,7 +85,7 @@ public class OI {
 		auxJoystick.leftWhileHeld(new ArmForward());
 		auxJoystick.yWhenPressed(new RampUp());
 		auxJoystick.aWhenPressed(new RampDown());
-		auxJoystick.startWhenPressed(new CommandAutonomous());
+		//auxJoystick.startWhenPressed(new CommandAutonomous());
 		//auxJoystick.rightThumbWhileHeld(command);
 	}
 	
