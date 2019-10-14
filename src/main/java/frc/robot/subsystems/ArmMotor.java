@@ -21,6 +21,9 @@ public class ArmMotor extends Subsystem {
     	}
     	return instance;
 	}
+	public void test(){
+		return;
+	}
 	
 	public void moveForward() {
 		ArmMotor.set(TalonControlMode, -.30);
